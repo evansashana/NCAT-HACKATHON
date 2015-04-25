@@ -1,25 +1,11 @@
 var addPost =function(){
-
-	var x = document.forms;
-	var post=x[0]['post'].value;
-	var email=x[0]['inputEmail'].value;
-	var email=x[0]['inputEmail'].value;
-	alert();
-
-	
-
+	 var x = document.forms;
+	 var post=x[0]['post'].value;
+	 var email=x[0]['inputEmail'].value;
+	 var email=x[0]['inputEmail'].value;
+     alert(post);
+	 var div = document.createElement('div');
+     div.className = 'col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4';
+     div.innerHTML = post;
+     document.getElementById('post').appendChild(div);
 };
-
-function addRow() {
-    var div = document.createElement('div');
-
-    div.className = 'row';
-
-    div.innerHTML = '<input type="text" name="name" value="" />\
-        <input type="text" name="value" value="" />\
-        <label> <input type="checkbox" name="check" value="1" /> Checked? </label>\
-        <input type="button" value="-" onclick="removeRow(this)">';
-
-     document.getElementById('content').appendChild(div);
-}
-
