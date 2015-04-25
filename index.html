@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Section scroller one-page template</title>
+    <title>NCAT COLLAB</title>
     <meta name="description" content="This one page example has a fixed navbar and full page height sections. Each section is vertically centered on larger screens, and then stack responsively on smaller screens. Scrollspy is used to activate the current menu item. This layout also has a contact form example. Uses animate.css, FontAwesome, Google Fonts (Lato and Bitter) and Bootstrap." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Codeply">
@@ -15,8 +15,6 @@
 
     <link rel="stylesheet" href="css/styles.css" />
     <!-- BOOSTRAP STUFF -->
-    <link rel="stylesheet" href="/css/boostrap.css" />
-    <link rel="stylesheet" href="/css/boostrap.min.css" />
   </head>
   <body >
     <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
@@ -28,16 +26,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand text-danger" href="#">NCAT COLLAB</a>
+            <a class="navbar-brand text-danger" href="#section1">NCAT COLLAB</a>
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapsible">
             <ul class="nav navbar-nav navbar-left">
            
-                <li><a href="#section5">Listings</a></li>
+                <li><a href="#section5">Students</a></li>
+                <li><a href="pro_fac.html">Faculty/Staff</a></li>
                 
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="addPost.html"  >Add Post</i></a></li>
+                <li><a href="#addPost" >Add Post</i></a></li>
             </ul>
              <ul class="nav navbar-nav navbar-right">
                 <li><a href="registration.html"  >Sign up</i></a></li>
@@ -48,10 +47,12 @@
 
 <section class="container-fluid" id="section1">
     <div class="v-center">
-        <h1 class="text-center">THINK.SHARE.COLLAB</h1>
+        <h1 class="text-center">THINK.CREATE.SHARE</h1>
         <h2 class="text-center lato animate slideInDown">AGGIE IDEAS </h2>
+
         <p class="text-center">
             <br>
+            <a href="#" class="btn btn-danger btn-lg btn-huge lato" data-toggle="modal" data-target="#myModal">Log in</a>
             <!-- s -->
         </p>
     </div>
@@ -65,12 +66,10 @@
 </section>
 
 
-
-
-
 <section class="container-fluid" id="section5">
     <div class="row">
-        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+        <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4" id="post">
+
             <h2 class="text-center lato">Listings</h2>
             <hr>
             <div class="media">
@@ -139,39 +138,36 @@
                  <ul class="list-inline"><li><a href="#">4 Days Ago</a></li><li><a href="#"><i class="glyphicon glyphicon-comment"></i> 4 Comments</a></li><li><a href="#"><i class="glyphicon glyphicon-share"></i> 1 Shares</a></li></ul>
             </div>
 
+            <div class="media">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+       <form class="form-signin" onsubmit="return addPost();" method="post">
+        <h2 class="form-signin-heading">SUBMIT A NEW POST</h2>
+
+        <label for="name" class="sr-only">Name</label>
+        <input type="text" id="name" class="form-control" placeholder="Enter name" required autofocus>
+        <br/>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label></label>
+        <textarea class="form-control" rows="5" id="post" placeholder="Post here"></textarea>
+        <!-- <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <div class="checkbox"> -->
+        
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="addPost">Add Post</button>
+      </form>
+
+            </div>
+
         </div>
     </div>
 </section>
-
-
-
-<section class="container-fluid" id="section7">
-    <div class="row">
-        <!--fontawesome icons-->
-        <div class="col-sm-1 col-sm-offset-3 col-xs-4 text-center">
-            <i class="fa fa-github fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-foursquare fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-pinterest fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-google-plus fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-twitter fa-4x"></i>
-        </div>
-        <div class="col-sm-1 col-xs-4 text-center">
-            <i class="fa fa-dribbble fa-4x"></i>
-        </div>
-    </div>
-</section>
-
 
 <div class="scroll-up">
-	<a href="#"><i class="fa fa-angle-up"></i></a>
+	<a href="#section1"><i class="fa fa-angle-up"></i></a>
 </div>
 
 <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -203,11 +199,9 @@
     </div>
 </div>
     <!--scripts loaded here-->
-    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="js/boostrap.js"></script>
-    <script src="js/boostrap.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="js/onSubmit.js"></script>
   </body>
 </html>
